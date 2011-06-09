@@ -13,4 +13,9 @@ WriteMakefile(
                      'Rose::DB::Object' => 0,
                      'Test::Simple' => 0.44,
                     },
+    META_MERGE => {
+        resources => {
+            repository => 'https://github.com/kmcgrath/Rose-DBx-Object-Cached-FastMmap',
+        },
+    },
 );
