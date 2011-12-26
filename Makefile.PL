@@ -5,7 +5,7 @@ use ExtUtils::MakeMaker;
 # the contents of the Makefile that is written.
 WriteMakefile(
     NAME         => 'Rose::DBx::Object::Cached::FastMmap',
-    VERSION_FROM => 'lib/Rose/DBx/Object/Cached/FastMmap.pm', # finds \$VERSION
+    VERSION_FROM => 'lib/Rose/DBx/Object/Cached/FastMmap.pm',
     AUTHOR       => 'Kevin C. McGrath (kmcgrath@baknet.com)',
     ABSTRACT     => 'Module abstract (<= 44 characters) goes here',
     PREREQ_PM    => {
@@ -15,7 +15,7 @@ WriteMakefile(
                     },
     META_MERGE => {
         resources => {
-            repository => 'https://github.com/kmcgrath/Rose-DBx-Object-Cached-FastMmap',
+            repository => 'https://github.com/kmcgrath/perl5-Rose-DBx-Object-Cached-FastMmap',
         },
     },
 );

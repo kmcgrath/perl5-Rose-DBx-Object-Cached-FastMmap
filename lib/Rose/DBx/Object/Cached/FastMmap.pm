@@ -14,7 +14,7 @@ our @ISA = qw(Rose::DB::Object);
 
 use Rose::DB::Object::Constants qw(STATE_IN_DB);
 
-our $VERSION = '0.04';
+our $VERSION = '0.05';
 
 our $SETTINGS = undef;
 
@@ -47,7 +47,7 @@ sub remember
   my $pk = join(PK_SEP, grep { defined } map { $self->$_() } $self->meta->primary_key_column_names);
 
   my $safe_obj = $self->__xrdbopriv_clone->__xrdbopriv_strip;
-  #my $safe_obj = $self->__xrdbopriv_strip;
+  $safe_obj->{__xrdbopriv_modified_columns} = {};
 
   my $successful_set = $cache->set("${class}::Objects_By_Id" . LEVEL_SEP . $pk, $safe_obj,($self->meta->cached_objects_expire_in || $class->cached_objects_settings->{expires_in} || 'never'));
 
